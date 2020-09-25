@@ -135,11 +135,11 @@ int Driver::addSecRule(std::unique_ptr<RuleWithActions> r) {
                     );
                 }
 
-                if (firstRule->hasTagAction()) {
+                if (firstRule->hasTags()) {
                     firstRule->getChainedParent()->setTags(
-                        firstRule->getTagsAction()
+                        firstRule->getTags()
                     );
-                    firstRule->cleanTags();
+                    firstRule->clearTags();
                 }
 
                 if (firstRule->hasDisruptiveAction()) {
