@@ -112,7 +112,7 @@ std::string Operator::resolveMatchMessage(Transaction *t,
             ret = "Matched \"Operator `" + m_op + "' with parameter `" +
                 utils::string::limitTo(200, m_param) +
                 "' against variable `" + key + "' (Value: `" +
-                utils::string::limitTo(100,
+                utils::string::limitTo(4,
                     utils::string::toHexIfNeeded(value)) + \
                 "' )";
         } else {
@@ -120,7 +120,7 @@ std::string Operator::resolveMatchMessage(Transaction *t,
             ret = "Matched \"Operator `" + m_op + "' with parameter `" +
                 utils::string::limitTo(200, p) +
                 "' against variable `" + key + "' (Value: `" +
-                utils::string::limitTo(100,
+                utils::string::limitTo(4,
                     utils::string::toHexIfNeeded(value)) +
                 "' )";
         }
